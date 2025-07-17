@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_shared_video_items",
+  "info": {
+    "displayName": "VideoItem"
+  },
+  "options": {},
+  "attributes": {
+    "orientation": {
+      "type": "enumeration",
+      "enum": [
+        "vertical",
+        "horizontal"
+      ]
+    },
+    "video": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "videos"
+      ]
+    },
+    "poster": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_shared_test_videos",
+  "info": {
+    "displayName": "testVideo"
+  },
+  "options": {},
+  "attributes": {
+    "oneVideoofTest": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "videos"
+      ]
+    },
+    "onePosterImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "name": {
+      "type": "string"
+    },
+    "position": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,23 @@
+{
+  "kind": "singleType",
+  "collectionName": "featured_works",
+  "info": {
+    "singularName": "featured-work",
+    "pluralName": "featured-works",
+    "displayName": "featuredWork"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "mainTitle": {
+      "type": "text"
+    },
+    "parterVideos": {
+      "type": "component",
+      "component": "shared.partner-video",
+      "repeatable": true
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_shared_test_texts",
+  "info": {
+    "displayName": "testText"
+  },
+  "options": {},
+  "attributes": {
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "testimonilaText": {
+      "type": "text"
+    },
+    "personImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "position": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

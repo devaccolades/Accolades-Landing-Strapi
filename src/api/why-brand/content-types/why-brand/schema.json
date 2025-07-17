@@ -1,0 +1,25 @@
+{
+  "kind": "singleType",
+  "collectionName": "why_brands",
+  "info": {
+    "singularName": "why-brand",
+    "pluralName": "why-brands",
+    "displayName": "whyBrand"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "brandVideos": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}

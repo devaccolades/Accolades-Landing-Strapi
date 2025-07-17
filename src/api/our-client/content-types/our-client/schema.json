@@ -1,0 +1,25 @@
+{
+  "kind": "singleType",
+  "collectionName": "our_clients",
+  "info": {
+    "singularName": "our-client",
+    "pluralName": "our-clients",
+    "displayName": "ourClient"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "clientLogo": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "kind": "singleType",
+  "collectionName": "under_heroes",
+  "info": {
+    "singularName": "under-hero",
+    "pluralName": "under-heroes",
+    "displayName": "underHero"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "mainText": {
+      "type": "text"
+    }
+  }
+}

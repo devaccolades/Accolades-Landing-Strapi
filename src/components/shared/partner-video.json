@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_shared_partner_videos",
+  "info": {
+    "displayName": "partnerVideo"
+  },
+  "options": {},
+  "attributes": {
+    "clientName": {
+      "type": "string"
+    },
+    "videoType": {
+      "type": "string"
+    },
+    "video": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "videos"
+      ]
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  },
+  "config": {}
+}

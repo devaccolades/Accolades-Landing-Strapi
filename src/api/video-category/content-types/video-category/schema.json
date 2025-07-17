@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "video_categories",
+  "info": {
+    "singularName": "video-category",
+    "pluralName": "video-categories",
+    "displayName": "VideoCategory"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "collectionName": {
+      "type": "string"
+    },
+    "companyName": {
+      "type": "string"
+    },
+    "videoType": {
+      "type": "string"
+    },
+    "videos": {
+      "type": "component",
+      "component": "shared.video-item",
+      "repeatable": true
+    }
+  }
+}

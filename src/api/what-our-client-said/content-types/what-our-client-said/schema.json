@@ -1,0 +1,25 @@
+{
+  "kind": "singleType",
+  "collectionName": "what_our_client_saids",
+  "info": {
+    "singularName": "what-our-client-said",
+    "pluralName": "what-our-client-saids",
+    "displayName": "whatOurClientSaid"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "videoTestimonial": {
+      "type": "component",
+      "component": "shared.test-video",
+      "repeatable": true
+    },
+    "testText": {
+      "type": "component",
+      "component": "shared.test-text",
+      "repeatable": true
+    }
+  }
+}
