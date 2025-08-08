@@ -373,6 +373,71 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiBlogCategoryBlogCategory
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'blog_categories';
+  info: {
+    displayName: 'blogCategory';
+    pluralName: 'blog-categories';
+    singularName: 'blog-category';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    blogs: Schema.Attribute.Relation<'oneToMany', 'api::blog.blog'>;
+    category: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::blog-category.blog-category'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiBlogBlog extends Struct.CollectionTypeSchema {
+  collectionName: 'blogs';
+  info: {
+    displayName: 'Blog';
+    pluralName: 'blogs';
+    singularName: 'blog';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    blog_category: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::blog-category.blog-category'
+    >;
+    category: Schema.Attribute.String;
+    coverImage: Schema.Attribute.Media<'images'>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.RichText;
+    innerImage: Schema.Attribute.Media<'images'>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::blog.blog'> &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    readTime: Schema.Attribute.Integer;
+    time: Schema.Attribute.Date;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiFeaturedWorkFeaturedWork extends Struct.SingleTypeSchema {
   collectionName: 'featured_works';
   info: {
@@ -515,6 +580,36 @@ export interface ApiOurClientOurClient extends Struct.SingleTypeSchema {
       'api::our-client.our-client'
     > &
       Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiSeoSeo extends Struct.CollectionTypeSchema {
+  collectionName: 'seos';
+  info: {
+    displayName: 'seo';
+    pluralName: 'seos';
+    singularName: 'seo';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::seo.seo'> &
+      Schema.Attribute.Private;
+    metaDescription: Schema.Attribute.Text;
+    metaTitle: Schema.Attribute.String;
+    ogDescription: Schema.Attribute.Text;
+    ogImage: Schema.Attribute.Media<'images'>;
+    ogTitle: Schema.Attribute.String;
+    page: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -1152,11 +1247,14 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
+      'api::blog-category.blog-category': ApiBlogCategoryBlogCategory;
+      'api::blog.blog': ApiBlogBlog;
       'api::featured-work.featured-work': ApiFeaturedWorkFeaturedWork;
       'api::form-submission.form-submission': ApiFormSubmissionFormSubmission;
       'api::hero.hero': ApiHeroHero;
       'api::modal.modal': ApiModalModal;
       'api::our-client.our-client': ApiOurClientOurClient;
+      'api::seo.seo': ApiSeoSeo;
       'api::under-hero.under-hero': ApiUnderHeroUnderHero;
       'api::video-category.video-category': ApiVideoCategoryVideoCategory;
       'api::what-our-client-said.what-our-client-said': ApiWhatOurClientSaidWhatOurClientSaid;
